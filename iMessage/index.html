@@ -1,328 +1,80 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Box Model</title>
-        <style>
-            html {background-color: #444;}
-            html, body {
-                color: #303030;
-                font-weight: 300;
-                font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-            }
-            html, body, div {margin: 0 auto;}
-            .container {
-                width: 25em;
-                height: 50em;
-                margin-top: 50px;
-                border: 2px solid #E5E4EA;
-                background-color: #E5E4EA;
-            }
-            .header{
-                padding: 5px;
-                height: 60px;
-                content: ' ';
-                position: relative;
-                box-shadow: 0 2px 4px rgba(0,0,0,0.15);
-            }
-            .phone-info {padding: 5px;}
-            .phone-info span {
-                margin: 5px; 
-                display: inline; 
-                font-size: 14px;
-            }
-            .message-info {padding: 5px;}
-            .phone-info .time {margin: 26%;}
-            .phone-info .battery {margin-left: 10px;}
-            .message-info span {
-                margin: 5px;
-                display: inline; 
-                font-size: 14px;
-            }
-            .message-info .messages {
-                padding-left: 20px;
-                padding-right: 20px;
-                background-size: 18px;
-                background-repeat: no-repeat;
-                background-image: url('assets/icon/back.svg')
-            }
-            .message-info .recipient {
-                margin: 33%;
-                font-size: 18px;
-                font-weight: bold;
-            }
-            .message-container{
-                padding: 5px;
-                height: 480px;
-                overflow: scroll;
-                background-color: white;
-            }
-            .message-container .bubble-container {width: 100%;}
-            .bubble {
-                width: 32%;
-                margin: 5px;
-                padding: 10px;
-                font-size: 15px;
-                text-align: left;
-                padding-left: 15px;
-                border-radius: 18px;
-                box-shadow: 0 2px 4px rgba(0,0,0,0.15);
-            }
-            .txt-white {color: #FFFFFF;}
-            .txt-lgt-blue{color: #59B0DB;}
-            .bubble-right{margin-left: 60%;}
-            .bg-grey {background-color: #E5E4EA;}
-            .bg-blue {background-color: #007EFF;}
-            .message-input {
-                width:100%;
-                position: relative;
-                background-color: #F7F7F7;
-            }
-            .message-input div { display: inline; }
-            .message-input textarea {
-                width: 75%;
-                margin: 5px;
-                padding: 8px;
-                height: 15px;
-                margin-left: 18%;
-                resize: vertical;
-                overflow: visible;
-                border-radius: 15px;
-                caret-color: #007EFF;
-                border: 1px solid #EBEBEB;
-            }
-            .message-input .send-btn {
-                color: white;
-                margin-top: 6px;
-                margin-left: 90%;
-                position: absolute;
-                padding: 20px;
-                background-size: 30px;
-                background-repeat: no-repeat;
-                background-image: url('assets/icon/send.svg')
-            }
-            .key-top{margin-left: 15px;}
-            .keyboard {padding: 5px; padding-top: 15px;}
-            .message-input textarea:focus {outline: none;}
-            .key-bot {margin-left: 15px;margin-top: 30px;}
-            .key-mid-top {margin-left: 40px; margin-top: 30px;}
-            .key-mid-bot {margin-left: 15px; margin-top: 30px;}
-            .key-btn{
-                padding: 10px;
-                cursor: pointer;
-                text-align: center;
-                border-radius: 8px;
-                background-color:white;
-                box-shadow: 0 2px 4px rgba(0,0,0,0.15);
-            }
-            .ctrl-btn { 
-                margin-right: 14px;
-                padding-right: 25px;
-                background-size: 30px;
-                background-position: center;
-                background-repeat: no-repeat;
-                background-image: url('assets/icon/arrow-up.png'); 
-            }
-            .back-btn {
-                margin-left: 14px;
-                padding-left: 25px;
-                padding-right: 25px;
-                background-size: 30px;
-                background-position: center;
-                background-repeat: no-repeat;
-                background-image: url('assets/icon/backspace.png'); 
-            }
-            .grey-btn {background-color: #ACB5BC;}
-            .aux-btn {padding-left: 20px; padding-right: 20px;}
-            .space-btn {padding-left: 80px; padding-right: 80px; }
-            .key-padding { padding-left: 15px; padding-right: 15px; }
-        </style>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta property="og:description" content="Hey, I'm Jake Parham! I'm a software engineer at Bread. Come say Hi!">
+		<meta property="og:author" content="Jake Parham">
+		<meta property="og:image" content="https://jakeparham.com/assets/img/me.jpg">
+        <title>iMessage</title>
+		<link rel="shortcut icon" href="https://jakeparham.com/assets/img/icon/favicon.ico">
+		<!-- Preload me -->
+		<link rel="preload" href="https://jakeparham.com/assets/img/me.jpg" as="image">
+		<!-- Import Google Font -->
+		<link rel="preload" as="font" href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-116357478-1"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'UA-116357478-1');
+		</script>
+		<style>
+			html {background-color: #79818c;}
+			html, body {
+				color: #303030;
+				font-weight: 300;
+				font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+			}
+		</style>
     </head>
     <body>
-        <div class="container">
-            <div class="header">
-                <div class="phone-info">
-                    <span class="carrier">AT&amp;T LTE</span>
-                    <span class="time">8:39 PM</span>
-                    <span class="battery">86%</span>
+		<message-container id="messages">
+			<key-board>
+				<div class="key-top">
+					<key-button up="Q" low="q" num="1" alt="["></key-button>
+                    <key-button up="W" low="w" num="2" alt="]"></key-button>
+                    <key-button up="E" low="e" num="3" alt="{"></key-button>
+                    <key-button up="R" low="r" num="4" alt="}"></key-button>
+                    <key-button up="T" low="t" num="5" alt="#"></key-button>
+                    <key-button up="Y" low="y" num="6" alt="%"></key-button>
+                    <key-button up="U" low="u" num="7" alt="^"></key-button>
+                    <key-button up="I" low="i" num="8" alt="*"></key-button>
+                    <key-button up="O" low="o" num="9" alt="+"></key-button>
+                    <key-button up="P" low="p" num="0" alt="="></key-button>
                 </div>
-                <div class="message-info">
-                    <span class="messages txt-lgt-blue"></span>
-                    <span id="recipient" class="recipient"></span>
+                <div class="key-mid-top">
+					<key-button up="A" low="a" num="-" alt="_"></key-button>
+                    <key-button up="S" low="s" num="/" alt="\"></key-button>
+                    <key-button up="D" low="d" num=":" alt="|"></key-button>
+                    <key-button up="F" low="f" num=";" alt="~"></key-button>
+                    <key-button up="G" low="g" num="(" alt="<"></key-button>
+                    <key-button up="H" low="h" num=")" alt=">"></key-button>
+                    <key-button up="J" low="j" num="$" alt="€"></key-button>
+                    <key-button up="K" low="k" num="&" alt="£"></key-button>
+                    <key-button up="L" low="l" num="@" alt="¥"></key-button>
                 </div>
-            </div>
-            <div id="messages" class="message-container"></div>
-            <div>
-                <div class="message-input">
-                    <div onclick="window.send(event)" class="send-btn">.</div>
-                    <div>
-                        <textarea id="msg" type="text" placeholder="iMessage..." disabled></textarea>
-                    </div>
+                <div class="key-mid-bot">
+					<key-button action="ctrl"></key-button>
+                    <key-button up="Z" low="z" num="" alt=""></key-button>
+                    <key-button up="X" low="x" num="." alt="."></key-button>
+                    <key-button up="C" low="c" num="," alt=","></key-button>
+                    <key-button up="V" low="v" num="?" alt="?"></key-button>
+                    <key-button up="B" low="b" num="!" alt="!"></key-button>
+                    <key-button up="N" low="n" num="`" alt="`"></key-button>
+                    <key-button up="M" low="m" num="" alt=""></key-button>
+                    <key-button action="back"></key-button>
                 </div>
-                <div class="keyboard">
-                    <div class="key-top">
-                        <span class="key-btn" data-key='{"up":"Q","low":"q","num":1,"alt":"["}'></span>
-                        <span class="key-btn" data-key='{"up":"W","low":"w","num":2,"alt":"]"}'></span>
-                        <span class="key-btn" data-key='{"up":"E","low":"e","num":3,"alt":"{"}'></span>
-                        <span class="key-btn" data-key='{"up":"R","low":"r","num":4,"alt":"}"}'></span>
-                        <span class="key-btn" data-key='{"up":"T","low":"t","num":5,"alt":"#"}'></span>
-                        <span class="key-btn" data-key='{"up":"Y","low":"y","num":6,"alt":"%"}'></span>
-                        <span class="key-btn" data-key='{"up":"U","low":"u","num":7,"alt":"^"}'></span>
-                        <span class="key-btn" data-key='{"up":"I","low":"i","num":8,"alt":"*"}'></span>
-                        <span class="key-btn" data-key='{"up":"O","low":"o","num":9,"alt":"+"}'></span>
-                        <span class="key-btn" data-key='{"up":"P","low":"p","num":0,"alt":"="}'></span>
-                    </div>
-                    <div class="key-mid-top">
-                        <span class="key-btn" data-key='{"up":"A","low":"a","num":"-","alt":"_"}'></span>
-                        <span class="key-btn" data-key='{"up":"S","low":"s","num":"\/","alt":"\\"}'></span>
-                        <span class="key-btn" data-key='{"up":"D","low":"d","num":":","alt":"|"}'></span>
-                        <span class="key-btn" data-key='{"up":"F","low":"f","num":";","alt":"~"}'></span>
-                        <span class="key-btn" data-key='{"up":"G","low":"g","num":"(","alt":"<"}'></span>
-                        <span class="key-btn" data-key='{"up":"H","low":"h","num":")","alt":">"}'></span>
-                        <span class="key-btn " data-key='{"up":"J","low":"j","num":"$","alt":"E"}'></span>
-                        <span class="key-btn" data-key='{"up":"K","low":"k","num":"&","alt":"U"}'></span>
-                        <span class="key-btn" data-key='{"up":"L","low":"l","num":"@","alt":"Y"}'></span>
-                    </div>
-                    <div class="key-mid-bot">
-                        <span class="key-btn ctrl-btn" data-key='{"action":"ctrl"}'></span>
-                        <span class="key-btn" data-key='{"up":"Z","low":"z","num":"","alt":""}'></span>
-                        <span class="key-btn" data-key='{"up":"X","low":"x","num":".","alt":"."}'></span>
-                        <span class="key-btn" data-key='{"up":"C","low":"c","num":",","alt":","}'></span>
-                        <span class="key-btn" data-key='{"up":"V","low":"v","num":"?","alt":"?"}'></span>
-                        <span class="key-btn" data-key='{"up":"B","low":"b","num":"!","alt":"!"}'></span>
-                        <span class="key-btn" data-key='{"up":"N","low":"n","num":"`","alt":"`"}'></span>
-                        <span class="key-btn" data-key='{"up":"M","low":"m","num":"","alt":""}'></span>
-                        <span class="key-btn grey-btn back-btn" data-key='{"action":"back"}'></span>
-                    </div>
-                    <div class="key-bot">
-                        <span class="key-btn aux-btn grey-btn" data-key='{"action":"num"}'>123</span>
-                        <span class="key-btn space-btn" data-key='{"action":"space"}'>space</span>
-                        <span class="key-btn aux-btn grey-btn" data-key='{"action":"return"}'>return</span>
-                    </div>
+                <div class="key-bot">
+                    <key-button action="num" up="123" low="123" num="ABC" alt='ABC'></key-button>
+                    <key-button action="space" up="space" low="space" num="space" alt="space"></key-button>
+                    <key-button action="return" up="return" low="return" num="return" alt="return"></key-button>
                 </div>
-            </div>
-        </div>
+			</key-board>
+		</message-container>
+		<script src="el.js"></script>
+		<script src="index.js"></script>
     </body>
-    <script>
-    function messenger (obj = {}) {
-        let self = this;
-        self.rec = obj.rec || 'N/A';
-        document.getElementById('recipient').innerHTML = self.rec;
-
-        self.list = obj.list || [];
-        self.msgs = document.getElementById('messages');
-        self.input = document.getElementById('msg');
-        self.keys = document.getElementsByClassName('key-btn');
-        self.mode = 1; //1=letter 2=number
-        self.page = 1; //1=normal 2=alternate
-
-        self.send = function (click) {
-            self.list[self.list.length-1].msgs.push(self.input.value);
-            self.input.value = '';
-            self.update_messages ();
-        };
-        window.send = self.send;
-
-        self.ctrl_fn = function(node) {
-            if (self.page === 1) self.page = 2;
-            else if (self.page === 2) self.page = 1;
-            self.update_keys();
-        };
-        self.num_fn = function (node) {
-            if (self.mode === 1) {
-                self.page = 1;
-                self.mode = 2;
-            } else if (self.mode === 2) { 
-                self.page = 1;
-                self.mode = 1;
-            }
-            if (self.mode === 1) {
-                if (node.innerHTML === 'ABC') node.innerHTML = '123';
-                else if (node.innerHTML === '123') node.innerHTML = 'ABC';
-            }
-            self.update_keys();
-        }
-        self.update_keys = function () {
-            for (let i = 0; i < self.keys.length; i++) {
-                let json = self.keys[i].getAttribute('data-key');
-                let key = JSON.parse(json);
-                if (key.action) continue;
-                let val = '';
-                if (self.mode === 1) {
-                    self.keys[i].style = 'visibility: visible';
-                    if (self.page === 1) val = key.up; 
-                    else val = key.low;
-                } else if (self.mode === 2) {
-                    if (!key.num && !key.alt) self.keys[i].style = 'visibility: hidden';
-                    if (self.page === 1) val = key.num;
-                    else val = key.alt;
-                }
-                self.keys[i].innerHTML = val;
-            }
-        };
-        /* Initialize event listeners for keyboard */
-        for (let i = 0; i < self.keys.length; i++) {
-            self.keys[i].addEventListener ('click', function(click) {
-                let key = JSON.parse(click.target.getAttribute('data-key'));
-                let msg = self.input.value;
-                console.log (key);
-                switch (key.action) {
-                    case 'ctrl':
-                        self.ctrl_fn(click.target);
-                        break;
-                    case 'back':
-                        msg = msg.slice(0, -1);
-                        break;
-                    case 'num':
-                        self.num_fn(click.target);
-                        break;
-                    case 'space':
-                        msg += ' ';
-                        break;
-                    case 'return':
-                        msg += "\n";
-                        break;
-                    default:
-                        msg += click.target.innerHTML;
-                        break;
-                }
-                self.input.innerHTML = msg;
-            });
-        }
-        self.update_messages = function () {
-            //delete all nodes
-            while (self.msgs.firstChild) self.msgs.removeChild(self.msgs.firstChild);
-            //replace all nodes
-            for (let i=0; i<self.list.length; i++) {
-                let bcontainer = document.createElement ('div');                
-                bcontainer.classList.add ('bubble-container');
-                for (let j = 0; j < self.list[i].msgs.length; j++) {
-                    let bubble = document.createElement ('div');                
-                    bubble.innerHTML = self.list[i].msgs[j];
-                    if (i % 2 === 0) bubble.classList.add ('bubble', 'bg-blue', 'bubble-right', 'txt-white');
-                    else bubble.classList.add ('bubble', 'bg-grey');
-                    bcontainer.append (bubble);
-                }
-                self.msgs.append(bcontainer);
-            }
-            self.msgs.scrollTop = self.msgs.scrollHeight;
-        };
-
-        self.update_keys();
-        self.update_messages ();
-        return self;
-    }
-
-    let m = new messenger({
-        rec: 'Pop',
-        list: [
-            {msgs: ['hey, what\'s up?']},
-            {msgs: ['not much', 'what\'re you up to?']},
-            {msgs: ['nothing', 'i\'m coming over']},
-            {msgs: ['what\'re we doing?']},
-            {msgs: ['let\'s play Sekiro', 'until we die...']},
-            {msgs: ['that\'ll be quick', 'i\'m in']},
-            {msgs: ['this dialogue is whack!', 'i\'m super dumb']},
-        ]
-    });
-    </script>
 </html>
