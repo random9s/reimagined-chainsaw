@@ -495,7 +495,7 @@ messageContainerTemplate.innerHTML = `
 		padding-right: 20px;
 		background-size: 18px;
 		background-repeat: no-repeat;
-		background-image: url('assets/icon/back.svg')
+		background-image: url('https://jakeparham.com/projects/iMessage/assets/icons/back.svg')
 	}
 	.message-info .recipient {
 		margin: 28%;
@@ -598,7 +598,7 @@ keyboardTemplate.innerHTML = `
 			padding: 20px;
 			background-size: 30px;
 			background-repeat: no-repeat;
-			background-image: url('assets/icon/send.svg')
+			background-image: url('https://jakeparham.com/projects/iMessage/assets/icons/send.svg')
 		}
 		.keyboard {padding: 5px; padding-top: 15px;}
 		.message-input textarea:focus {outline: none;}
@@ -699,7 +699,7 @@ keyButtonTemplate.innerHTML = `
 		background-size: 30px;
 		background-position: center;
 		background-repeat: no-repeat;
-		background-image: url('assets/icon/arrow-up.png');
+		background-image: url('https://jakeparham.com/projects/iMessage/assets/icons/arrow-up.png');
 	}
 	.back-btn {
 		margin-left: 14px;
@@ -708,7 +708,7 @@ keyButtonTemplate.innerHTML = `
 		background-size: 30px;
 		background-position: center;
 		background-repeat: no-repeat;
-		background-image: url('assets/icon/backspace.png');
+		background-image: url('https://jakeparham.com/projects/iMessage/assets/icons/backspace.png');
 	}
 	.grey-btn {background-color: #ACB5BC;}
 	.aux-btn {padding-left: 20px; padding-right: 20px;}
